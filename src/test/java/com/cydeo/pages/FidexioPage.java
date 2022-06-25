@@ -34,5 +34,10 @@ public class FidexioPage {
     @FindBy (xpath = "//b[.='Sign in']")
     public WebElement signInButton;
 
+    @FindBy (xpath = "//span[.='Inbox']")
+    public WebElement inBoxButton;
+
+
+
 
 }

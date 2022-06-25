@@ -45,9 +45,9 @@ public class FidexioStepDefinitions {
 
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 15);
 
-        wait.until(ExpectedConditions.visibilityOf(fidexioPage.message));
+        wait.until(ExpectedConditions.visibilityOf(fidexioPage.inBoxButton));
 
-        Assert.assertTrue(fidexioPage.message.isDisplayed());
+        Assert.assertTrue(fidexioPage.inBoxButton.isDisplayed());
 
     }
 
