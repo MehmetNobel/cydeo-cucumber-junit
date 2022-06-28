@@ -16,50 +16,33 @@ public class FidexioStepDefinitions {
 
     FidexioPage fidexioPage = new FidexioPage();
 
-    @Given("user is on the fidexio log in page")
-    public void user_is_on_the_fidexio_log_in_page() {
 
-
-        Driver.getDriver().get(ConfigurationReader.getProperty("url.fidexio"));
-
-        //2-Driver.getDriver().get("https://www.qa.fidexio.com");
-
-    }
-
-
-    @When("user enters the {string} and {string} on fidexio login  Page")
-    public void userEntersTheAndOnFidexioLoginPage(String arg0, String arg1) {
+    @When("user enters the {string} and password {string}")
+    public void userEntersTheAndPassword(String arg0, String arg1) {
 
         fidexioPage.emailInputBox.sendKeys(arg0);
-
         fidexioPage.passwordInputBox.sendKeys(arg1);
-
         fidexioPage.submitButton.click();
 
     }
 
-    @Then("verfy that user launched the page")
-    public void verfyThatUserLaunchedThePage() {
 
-        //String expectedText = "Congratulations, your inbox is empty";
+    @Given("user is on the fidexiologin page")
+    public void userIsOnTheFidexiologinPage() {
 
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 15);
+        Driver.getDriver().get(ConfigurationReader.getProperty("url.fidexio"));
+    }
 
-        wait.until(ExpectedConditions.visibilityOf(fidexioPage.inBoxButton));
+    @Then("user is on the homepage")
+    public void userIsOnTheHomepage() {
 
         Assert.assertTrue(fidexioPage.inBoxButton.isDisplayed());
 
-    }
 
-    @And("logout from the page")
-    public void logoutFromThePage() {
 
-        fidexioPage.logout1.click();
-        fidexioPage.logout2.click();
-
-        BrowserUtils.waitForVisibility(fidexioPage.signInButton,15);
 
     }
+
 
 
 }

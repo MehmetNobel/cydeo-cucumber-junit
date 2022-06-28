@@ -27,10 +27,10 @@
                     <parallel>methods</parallel>   <!-- methods means features -->
                     <!--   <useUnlimitedThreads>true</useUnlimitedThreads> -->
                     <threadCount>4</threadCount>
-                    <perCoreThreadCount>false</perCoreThreadCount>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <includes>
-                        <include>**/CukesRunner*.java</include>    <!-- if the company  Cukesrunner is a different name then we should use that name. -->
+                    <!--  <perCoreThreadCount>false</perCoreThreadCount> -->
+                      <testFailureIgnore>true</testFailureIgnore>
+                      <includes>
+                          <include>**/CukesRunner*.java</include>    <!-- if the company  Cukesrunner is a different name then we should use that name. -->
                     </includes>
                 </configuration>
             </plugin>
