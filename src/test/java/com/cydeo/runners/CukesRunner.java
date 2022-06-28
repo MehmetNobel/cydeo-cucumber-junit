@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
         plugin = {
                 //"pretty",   // to show the inf on the console.actually optional, not needed so much.
                 "html:target/cucumber-report.html",
+                "json:target/cucumber.json",
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"    // look at cucumber / js/ overview-features
         },  // generate the report
