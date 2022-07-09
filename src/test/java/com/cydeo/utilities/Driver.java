@@ -74,6 +74,20 @@ public class Driver {
                         e.printStackTrace();
                     }
                     break;
+                case "saucelab-chrome":
+                    try {
+                        URL url = new URL("https://oauth-mehmetnobel26-075dd:62c42ec9-ff03" +
+                                "-4c7a-8501-803b1e868385@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
+                        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+                        desiredCapabilities.setBrowserName("chrome");
+                        driverPool.set(new RemoteWebDriver(url,desiredCapabilities));
+                        driverPool.get().manage().window().maximize();
+                        driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+
             }
         }
 

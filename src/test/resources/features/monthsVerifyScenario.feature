@@ -1,6 +1,6 @@
 Feature: Verify that all months are visible
 
-    @wipMonths
+    @wipMonths @saucelab
   Scenario: All the months are visible or not
     Given User goes to the cydeoPracticePage
     And user clicks the dropdown button

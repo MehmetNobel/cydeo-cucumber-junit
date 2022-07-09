@@ -2,7 +2,7 @@ Feature: Wiki search functionality
   Agile Story:As a user, when I am on the Wiki search page
   I should be able to search whatever I want and see relevant information.
 
-
+  @saucelab
   Scenario: Search page title verification
     Given user is on the Wiki page
     When  user is searches for "Atatürk"
