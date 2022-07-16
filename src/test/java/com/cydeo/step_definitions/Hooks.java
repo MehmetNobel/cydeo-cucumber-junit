@@ -9,15 +9,12 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-
     //runs before every scenario
     //@Before   // import from io.cucumber.java not junit
     public void setupScenario(){
-
         System.out.println("====setting up browser using cucumber @Before");
 
     }
-
 
     //runs after every scenario
     @After   // import from io.cucumber.java not junit
