@@ -13,8 +13,8 @@ public class CapitalPage {
 
         PageFactory.initElements(Driver.getDriver(), this);
 
-
     }
+
     @FindBy (css = "input[name='q']")
     public WebElement searchInputArea;
 
